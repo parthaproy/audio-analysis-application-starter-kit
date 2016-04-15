@@ -1,10 +1,10 @@
 ---
 declared-services:
   concept-insights-service:
-    label: concept_insights
+    label: ci-pr
     plan: standard
   speech-to-text-service:
-    label: speech_to_text
+    label: s2t-pr
     plan: standard
 applications:
 - name: audio-analysis
@@ -12,8 +12,8 @@ applications:
   command: npm start
   memory: 512M
   services:
-  - speech-to-text-service
-  - concept-insights-service
+  - s2t-pr
+  - ci-pr
   env:
     NODE_ENV: production
     SECURE_EXPRESS: 1
